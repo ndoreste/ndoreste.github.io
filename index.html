@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nauzet Doreste García · Sistemas, redes y ciberseguridad</title>
+<meta name="description" content="Estudiante de 2º ASIR y Máster en Ciberseguridad en Gran Canaria. Busco prácticas en sistemas, redes, soporte IT o ciberseguridad. Proyectos revisables en GitHub.">
+<link rel="canonical" href="https://ndoreste.github.io/">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0a0f14">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Nauzet Doreste García · Sistemas, redes y ciberseguridad">
+<meta property="og:description" content="Estudiante de 2º ASIR y Máster en Ciberseguridad. Busco prácticas en sistemas, redes y ciberseguridad.">
+<meta property="og:url" content="https://ndoreste.github.io/">
+<meta property="og:locale" content="es_ES">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230a0f14'/%3E%3Ccircle cx='10' cy='16' r='4' fill='%234fe0c4'/%3E%3Crect x='17' y='14' width='9' height='4' rx='1' fill='%23e3eaef'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&family=Martian+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Nauzet Doreste García",
+  "url": "https://ndoreste.github.io/",
+  "email": "mailto:naudoreste@gmail.com",
+  "jobTitle": "Estudiante de 2º ASIR y Máster en Ciberseguridad",
+  "description": "Estudiante de Administración de Sistemas Informáticos en Red (ASIR) y del Máster en Ciberseguridad. Busca prácticas en administración de sistemas, redes, soporte IT o ciberseguridad.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Las Palmas de Gran Canaria",
+    "addressRegion": "Canarias",
+    "addressCountry": "ES"
+  },
+  "affiliation": {
+    "@type": "EducationalOrganization",
+    "name": "Prometeo by ThePower"
+  },
+  "memberOf": {
+    "@type": "Organization",
+    "name": "Imperio Agéntico"
+  },
+  "knowsAbout": [
+    "Administración de sistemas Linux",
+    "Redes informáticas",
+    "VLAN y listas de control de acceso",
+    "Ciberseguridad",
+    "Docker",
+    "Automatización con n8n",
+    "Agentes de IA",
+    "Node.js"
+  ],
+  "knowsLanguage": ["es", "en"],
+  "sameAs": [
+    "https://www.linkedin.com/in/nauzet-doreste-garcia",
+    "https://github.com/ndoreste"
+  ]
+}
+</script>
+<style>
+  :root {
+    --void: #0a0f14;
+    --slab: #10181f;
+    --rule: #1e2b35;
+    --chalk: #e3eaef;
+    --fog: #8fa0ac;
+    --signal: #22c7a9;
+    --signal-hi: #4fe0c4;
+
+    --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+    --body: "Instrument Sans", "Segoe UI", system-ui, sans-serif;
+    --mono: "Martian Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+
+    --gutter: clamp(16px, 5vw, 56px);
+    --measure: 1120px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--void);
+    color: var(--chalk);
+    font: 400 17px/1.6 var(--body);
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--signal-hi); text-underline-offset: 3px; }
+  a:hover { color: var(--chalk); }
+  :focus-visible { outline: 2px solid var(--signal-hi); outline-offset: 3px; border-radius: 2px; }
+
+  .skip {
+    position: absolute; left: -9999px; top: 8px;
+    background: var(--signal-hi); color: var(--void); padding: 8px 12px; font-weight: 600;
+  }
+  .skip:focus { left: 8px; }
+
+  .wrap { max-width: var(--measure); margin: 0 auto; padding: 0 var(--gutter); }
+
+  /* Cabecera */
+  .top {
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    padding-top: 22px; padding-bottom: 22px;
+    font: 400 12px/1 var(--mono);
+    letter-spacing: 0.02em;
+  }
+  .top .handle { color: var(--fog); text-decoration: none; }
+  .top .handle b { color: var(--signal-hi); font-weight: 500; }
+  .top nav { display: flex; gap: 20px; flex-wrap: wrap; justify-content: flex-end; }
+  .top nav a { color: var(--fog); text-decoration: none; }
+  .top nav a:hover { color: var(--chalk); }
+
+  /* Portada */
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+    gap: clamp(32px, 5vw, 72px);
+    align-items: center;
+    padding-top: clamp(40px, 9vh, 110px);
+    padding-bottom: clamp(56px, 10vh, 120px);
+  }
+  .eyebrow {
+    margin: 0 0 18px;
+    font: 400 12px/1.4 var(--mono);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--signal);
+  }
+  h1 {
+    margin: 0;
+    font: 700 clamp(44px, 7.4vw, 92px)/0.92 var(--display);
+    font-variation-settings: "opsz" 96;
+    letter-spacing: -0.035em;
+  }
+  h1 .last { display: block; color: var(--fog); font-weight: 500; }
+  .lead {
+    margin: 28px 0 0;
+    max-width: 34ch;
+    font-size: clamp(18px, 1.6vw, 21px);
+    line-height: 1.5;
+  }
+  .lead + .lead { margin-top: 12px; color: var(--fog); font-size: 17px; }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+  .btn {
+    display: inline-block; padding: 13px 20px;
+    font: 600 15px/1 var(--body);
+    text-decoration: none; border-radius: 6px;
+    border: 1px solid var(--rule); color: var(--chalk);
+  }
+  .btn.primary { background: var(--signal-hi); border-color: var(--signal-hi); color: var(--void); }
+  .btn.primary:hover { background: var(--chalk); border-color: var(--chalk); color: var(--void); }
+  .btn:not(.primary):hover { border-color: var(--fog); color: var(--chalk); }
+
+  /* Firma: salida de systemctl status */
+  .status {
+    margin: 0;
+    background: var(--slab);
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    padding: 22px 24px 24px;
+    font: 400 13px/1.75 var(--mono);
+    color: var(--chalk);
+    box-shadow: 0 30px 80px -40px rgba(34, 199, 169, 0.35);
+  }
+  .status .cmd { color: var(--fog); margin: 0 0 12px; }
+  .status .cmd b { color: var(--signal-hi); font-weight: 500; }
+  .status .unit { margin: 0 0 10px; font-weight: 500; }
+  .dot {
+    display: inline-block; width: 9px; height: 9px; border-radius: 50%;
+    background: var(--signal-hi); margin-right: 8px; vertical-align: 1px;
+    box-shadow: 0 0 0 0 rgba(79, 224, 196, 0.6);
+    animation: pulse 2.4s ease-out infinite;
+  }
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(79, 224, 196, 0.55); }
+    70% { box-shadow: 0 0 0 9px rgba(79, 224, 196, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(79, 224, 196, 0); }
+  }
+  .status dl {
+    display: grid; grid-template-columns: max-content minmax(0, 1fr);
+    column-gap: 14px; margin: 0;
+  }
+  .status dt { color: var(--fog); text-align: right; }
+  .status dd { margin: 0; overflow-wrap: anywhere; }
+  .status .ok { color: var(--signal-hi); }
+  .status a { color: var(--chalk); }
+  .status a:hover { color: var(--signal-hi); }
+
+  /* Secciones */
+  section { border-top: 1px solid var(--rule); padding-top: 56px; padding-bottom: 72px; }
+  .sec-head { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 24px; margin-bottom: 36px; }
+  h2 {
+    margin: 0;
+    font: 700 28px/1.1 var(--display);
+    letter-spacing: -0.02em;
+  }
+  .sec-head p { margin: 4px 0 0; color: var(--fog); max-width: 58ch; }
+
+  /* Proyectos */
+  .projects { list-style: none; margin: 0; padding: 0; }
+  .project {
+    display: grid; grid-template-columns: 220px minmax(0, 1fr) auto;
+    gap: 8px 24px; padding: 22px 0;
+    border-top: 1px solid var(--rule);
+  }
+  .project:first-child { border-top: 0; padding-top: 0; }
+  .project h3 { margin: 0; font: 700 20px/1.25 var(--display); letter-spacing: -0.01em; }
+  .project p { margin: 0; max-width: 62ch; }
+  .tags { margin: 10px 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 6px 14px; font: 400 11px/1.6 var(--mono); color: var(--fog); }
+  .links { display: flex; gap: 16px; font: 500 12px/1.6 var(--mono); white-space: nowrap; }
+
+  /* Habilidades */
+  .skills { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; }
+  .skills h3 { margin: 0 0 10px; font: 500 12px/1.4 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--signal); }
+  .skills p { margin: 0; color: var(--chalk); font-size: 16px; }
+
+  /* Antes de IT */
+  .before { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+  .before li {
+    display: grid; grid-template-columns: 220px minmax(0, 1fr);
+    gap: 4px 24px; padding: 18px 0; border-top: 1px solid var(--rule);
+  }
+  .before li:first-child { border-top: 0; padding-top: 0; }
+  .before .when { font: 400 12px/1.9 var(--mono); color: var(--fog); }
+  .before strong { font-weight: 600; }
+  .before p { margin: 2px 0 0; color: var(--fog); max-width: 62ch; }
+
+  /* Contacto */
+  .contact { padding-bottom: 96px; }
+  .contact-line {
+    margin: 0;
+    font: 700 clamp(28px, 4.6vw, 52px)/1.05 var(--display);
+    letter-spacing: -0.03em;
+    max-width: 18ch;
+  }
+  .contact-list { list-style: none; margin: 32px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 12px 32px; font: 400 14px/1.6 var(--mono); }
+  .contact-list span { color: var(--fog); margin-right: 8px; }
+
+  footer { border-top: 1px solid var(--rule); padding-top: 22px; padding-bottom: 32px; font: 400 11px/1.6 var(--mono); color: var(--fog); }
+
+  .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; }
+    .sec-head, .project, .before li { grid-template-columns: 1fr; }
+    .skills { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .links { white-space: normal; }
+  }
+  @media (max-width: 520px) {
+    .top nav { gap: 14px; }
+    .top .handle span { display: none; }
+    .skills { grid-template-columns: 1fr; }
+    .status { padding: 18px 16px; font-size: 12px; }
+    .status dt { text-align: left; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .dot { animation: none; }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+
+<header class="wrap top">
+  <a class="handle" href="https://github.com/ndoreste"><b>ndoreste</b><span> · github</span></a>
+  <nav aria-label="Secciones">
+    <a href="#proyectos">Proyectos</a>
+    <a href="#habilidades">Qué sé hacer</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<main id="main">
+  <div class="wrap hero">
+    <div>
+      <p class="eyebrow">Sistemas · redes · ciberseguridad</p>
+      <h1>Nauzet <span class="last">Doreste García</span></h1>
+      <p class="lead">Estudio 2º de ASIR y el Máster en Ciberseguridad. Busco empresa para hacer las prácticas en administración de sistemas, redes, soporte IT o ciberseguridad.</p>
+      <p class="lead">Monto, rompo y documento. Todo lo que ves aquí está publicado en GitHub y se puede revisar.</p>
+      <div class="actions">
+        <a class="btn primary" href="mailto:naudoreste@gmail.com">Escríbeme</a>
+        <a class="btn" href="https://www.linkedin.com/in/nauzet-doreste-garcia">Ver mi LinkedIn</a>
+      </div>
+    </div>
+
+    <figure class="status" aria-labelledby="status-cap">
+      <figcaption id="status-cap" class="sr-only">Resumen de perfil con formato de la salida de systemctl status</figcaption>
+      <p class="cmd"><b>$</b> systemctl status nauzet</p>
+      <p class="unit"><span class="dot" aria-hidden="true"></span>nauzet.service · técnico de sistemas en formación</p>
+      <dl>
+        <dt>Loaded:</dt><dd>2º ASIR + Máster en Ciberseguridad, Prometeo by ThePower</dd>
+        <dt>Active:</dt><dd><span class="ok">active</span> (buscando prácticas FCT)</dd>
+        <dt>Where:</dt><dd>Las Palmas de Gran Canaria · presencial, híbrido o remoto</dd>
+        <dt>Stack:</dt><dd>Linux · Redes · Docker · n8n + IA · Node.js</dd>
+        <dt>Docs:</dt><dd><a href="https://github.com/ndoreste">github.com/ndoreste</a></dd>
+      </dl>
+    </figure>
+  </div>
+
+  <section id="proyectos" class="wrap">
+    <div class="sec-head">
+      <h2>Proyectos</h2>
+      <p>Cada uno tiene su código, su documentación y, cuando aplica, capturas de cada paso.</p>
+    </div>
+    <ul class="projects">
+      <li class="project">
+        <h3>ASIR Infra Lab</h3>
+        <div>
+          <p>Infraestructura TI de una empresa ficticia, en equipo. Servidor Ubuntu con DNS, web HTTPS, carpeta compartida, cortafuegos y copias automáticas; red de 9 VLAN con ACL en Packet Tracer. Incluye los fallos que encontré al revisarlo y cómo corregirlos.</p>
+          <ul class="tags"><li>Ubuntu Server</li><li>BIND9</li><li>Apache</li><li>Samba</li><li>UFW</li><li>fail2ban</li><li>Cisco</li><li>MySQL</li></ul>
+        </div>
+        <div class="links"><a href="https://github.com/ndoreste/asir-infra-lab">Código</a></div>
+      </li>
+      <li class="project">
+        <h3>n8n Automation Lab</h3>
+        <div>
+          <p>Automatizaciones que uso de verdad, exportadas sin secretos: un resumen diario de noticias de IA que llega a Telegram y un traductor técnico de laboratorios de ciberseguridad con webhook autenticado.</p>
+          <ul class="tags"><li>n8n</li><li>LLM</li><li>Telegram</li><li>Webhooks</li></ul>
+        </div>
+        <div class="links"><a href="https://github.com/ndoreste/n8n-automation-lab">Código</a></div>
+      </li>
+      <li class="project">
+        <h3>AI Agent Ecosystem</h3>
+        <div>
+          <p>Caso de estudio de cómo organizo y opero agentes de IA en un VPS: contenedores Docker, accesos por Telegram y Discord con lista de permitidos y gestión de secretos.</p>
+          <ul class="tags"><li>Docker</li><li>VPS</li><li>Agentes de IA</li><li>Gestión de secretos</li></ul>
+        </div>
+        <div class="links"><a href="https://github.com/ndoreste/ai-agent-ecosystem">Documentación</a></div>
+      </li>
+      <li class="project">
+        <h3>ASIR Knowledge Graph 3D</h3>
+        <div>
+          <p>Grafo 3D interactivo de mis apuntes de ASIR. La versión pública se genera con un proceso que se detiene si detecta datos privados.</p>
+          <ul class="tags"><li>Node.js</li><li>Canvas</li><li>Obsidian</li></ul>
+        </div>
+        <div class="links"><a href="https://ndoreste.github.io/asir-knowledge-graph-3d/">Demo</a><a href="https://github.com/ndoreste/asir-knowledge-graph-3d">Código</a></div>
+      </li>
+      <li class="project">
+        <h3>noSQL Movies API</h3>
+        <div>
+          <p>API REST de películas, cines y series con arquitectura por capas, almacenamiento intercambiable y tests automatizados.</p>
+          <ul class="tags"><li>Node.js</li><li>Express</li><li>MongoDB</li><li>node:test</li><li>Postman</li></ul>
+        </div>
+        <div class="links"><a href="https://github.com/ndoreste/nosql-movies-api">Código</a></div>
+      </li>
+      <li class="project">
+        <h3>Plataforma de tests de ASIR</h3>
+        <div>
+          <p>Plataforma de estudio con tests por asignatura, laboratorio de errores, tarjetas de repaso y simulacro cronometrado. Funciona entera en el navegador.</p>
+          <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+        </div>
+        <div class="links"><a href="https://ndoreste.github.io/interactive-test-platform/">Demo</a><a href="https://github.com/ndoreste/interactive-test-platform">Código</a></div>
+      </li>
+    </ul>
+  </section>
+
+  <section id="habilidades" class="wrap">
+    <div class="sec-head">
+      <h2>Qué sé hacer</h2>
+      <p>Lo que he usado en proyectos propios o de clase, no solo en apuntes.</p>
+    </div>
+    <div class="skills">
+      <div>
+        <h3>Sistemas</h3>
+        <p>Ubuntu Server, Bash, DNS con BIND9, Apache con HTTPS, Samba, UFW, fail2ban y copias de seguridad con cron.</p>
+      </div>
+      <div>
+        <h3>Redes</h3>
+        <p>VLAN, 802.1Q, router-on-a-stick, ACL, DHCP y DNS en Cisco Packet Tracer.</p>
+      </div>
+      <div>
+        <h3>Automatización e IA</h3>
+        <p>Workflows con n8n y LLM, bots de Telegram, webhooks y agentes de IA en un VPS con Docker.</p>
+      </div>
+      <div>
+        <h3>Desarrollo</h3>
+        <p>JavaScript y Node.js, Express, MongoDB, MySQL, APIs REST, Git, Postman y Playwright.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="antes" class="wrap">
+    <div class="sec-head">
+      <h2>Antes de IT</h2>
+      <p>Más de 20 años trabajando antes de estudiar sistemas. Esto es lo que me llevo a un puesto técnico.</p>
+    </div>
+    <ul class="before">
+      <li>
+        <span class="when">2017 – hoy</span>
+        <div><strong>Recepción y centralita en Tirma</strong>
+          <p>Atender a quien llama con prisa, entender qué necesita y derivarlo bien. Es lo mismo que pide un puesto de soporte.</p></div>
+      </li>
+      <li>
+        <span class="when">2009 – 2010</span>
+        <div><strong>Responsable de tienda en Intersport</strong>
+          <p>Un equipo de 6 a 10 personas, turnos, horas e inventario.</p></div>
+      </li>
+      <li>
+        <span class="when">1999 – 2003</span>
+        <div><strong>Ejército de Tierra, especialidad TEDAX</strong>
+          <p>Aprendí a no tocar nada sin procedimiento y a decidir bajo presión.</p></div>
+      </li>
+    </ul>
+  </section>
+
+  <section id="contacto" class="wrap contact">
+    <p class="contact-line">¿Tienes plaza de prácticas en sistemas, redes o ciberseguridad?</p>
+    <ul class="contact-list">
+      <li><span>Correo</span><a href="mailto:naudoreste@gmail.com">naudoreste@gmail.com</a></li>
+      <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/nauzet-doreste-garcia">nauzet-doreste-garcia</a></li>
+      <li><span>GitHub</span><a href="https://github.com/ndoreste">ndoreste</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="wrap">Nauzet Doreste García · Las Palmas de Gran Canaria · actualizado en septiembre de 2026</footer>
+</body>
+</html>
